@@ -1,18 +1,18 @@
-@media (min-width: 102.4rem) {
+@media (min-width: 64em) {
   // styles go here
 }
 
-// 640px, 1024px, 1440px
+// 764px, 1024px, 1440px
 $breakpoints-up: (
-  "medium": "64rem",
-  "large": "102.4rem",
-  "xlarge": "144rem",
+  "medium": "47.75em",
+  "large": "64em",
+  "xlarge": "90em",
 );
-// 639px, 1023px, 1439px
+// 763.9px, 1023.9px, 1439.9px
 $breakpoints-down: (
-  "small": "63.9rem",
-  "medium": "102.3rem",
-  "large": "143.9rem",
+  "small": "47.74375em",
+  "medium": "63.99em",
+  "large": "89.99em",
 );
 
 @mixin breakpoint-up($size) {
