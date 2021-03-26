@@ -142,6 +142,10 @@ button,
           align-items: baseline;
 }
 
+.wrapper {
+  padding: 0 2.4rem;
+}
+
 @media (max-width: 47.74375em) {
   .hide-on-mobile {
     display: none;
@@ -152,6 +156,13 @@ button,
   .hide-on-desktop {
     display: none;
   }
+}
+
+.header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header.open .overlay {
@@ -188,8 +199,9 @@ button,
 }
 
 .header__nav {
-  padding: 2.2rem 2.4rem;
-  background-color: white;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 2.2rem 0;
 }
 
 .header__logo img {
@@ -248,7 +260,7 @@ button,
 
 @media (min-width: 47.75em) {
   .header__nav {
-    padding: 1.8rem 2.4rem;
+    padding: 1.8rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

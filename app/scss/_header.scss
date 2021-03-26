@@ -1,4 +1,8 @@
 .header {
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  width: 100%;
   &.open {
     .overlay {
       animation: fade-in 300ms ease-in-out forwards;
@@ -27,8 +31,9 @@
     background: linear-gradient($darkBlue, transparent);
   }
   &__nav {
-    padding: 2.2rem 2.4rem;
-    background-color: $white;
+    margin: 0 auto;
+    max-width: $desktopWidth;
+    padding: 2.2rem 0;
   }
   &__logo {
     img {
@@ -81,7 +86,7 @@
 
   @include breakpoint-up(medium) {
     &__nav {
-      padding: 1.8rem 2.4rem;
+      padding: 1.8rem 0;
     }
   }
 }
