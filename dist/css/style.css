@@ -160,7 +160,8 @@ button,
 
 .header {
   background-color: white;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
 }
