@@ -21,10 +21,40 @@ body {
     overflow: hidden;
   }
 }
+// Text
 h1,
-h2,
-h3 {
+h2 {
   margin-top: 0;
+  color: $darkBlue;
+  line-height: 1.15;
+  font-weight: 300;
+}
+h1 {
+  font-size: $font-lg;
+  margin-bottom: 0.5em;
+
+  @include breakpoint-up("large") {
+    font-size: $font-xl;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 0.7222em;
+
+  @include breakpoint-up("large") {
+    font-size: $font-lg;
+  }
+}
+
+p {
+  font-size: $font-sm;
+  line-height: 1.5;
+  margin-bottom: 3.6rem;
+
+  @include breakpoint-up("large") {
+    font-size: $font-md;
+  }
 }
 a,
 a:visited,

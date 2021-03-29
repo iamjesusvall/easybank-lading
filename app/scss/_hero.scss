@@ -1,10 +1,8 @@
 .hero {
   background-color: $veryLightGray;
-  // position: relative;
-  overflow-x: hidden;
 
   .wrapper {
-    @include breakpoint-up("medium") {
+    @include breakpoint-up("large") {
       display: flex;
       align-items: center;
     }
@@ -15,11 +13,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    // position: relative;
-    min-height: 28rem;
+    position: relative;
+    min-height: 29rem;
 
     @include breakpoint-up("medium") {
-      min-height: 65.6rem;
+      min-height: 40rem;
+      background-position: center 70%;
+    }
+
+    @include breakpoint-up("large") {
+      height: 65.6rem;
       flex: 3;
       order: 2;
       background-image: none;
@@ -28,17 +31,16 @@
     }
 
     &::before {
-      content: "";
-      background-image: url("/images/bg-intro-desktop.svg");
-      background-repeat: no-repeat;
-      background-position: -11% 157%;
-      background-size: 82%;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-
-      @include breakpoint-down("small") {
-        background-image: none;
+      @include breakpoint-up("large") {
+        content: "";
+        background-image: url("/images/bg-intro-desktop.svg");
+        background-repeat: no-repeat;
+        // background-position: center bottom;
+        background-size: 129%;
+        position: absolute;
+        height: 100%;
+        width: 150%;
+        background-position: 11% 77%;
       }
     }
 
@@ -47,14 +49,21 @@
       background-image: url(/images/image-mockups.png);
       background-size: 91%;
       background-repeat: no-repeat;
-      background-position: center -122px;
+      background-position: center -123px;
       position: absolute;
       height: 100%;
       width: 100%;
 
       @include breakpoint-up("medium") {
         background-size: 52%;
-        background-position: 22.8% 114%;
+      }
+
+      @include breakpoint-up("large") {
+        width: 120%;
+        height: 122%;
+        background-size: 105%;
+        background-position: center 90%;
+        left: 24%;
       }
     }
   }
@@ -62,32 +71,10 @@
   &__text {
     text-align: center;
 
-    @include breakpoint-up("medium") {
+    @include breakpoint-up("large") {
       flex: 2.2;
       order: 1;
       text-align: left;
-    }
-
-    h1 {
-      font-weight: 300;
-      font-size: $font-lg;
-      color: $darkBlue;
-      line-height: 1.15;
-      margin-bottom: 0.6486em;
-
-      @include breakpoint-up("medium") {
-        font-size: $font-xl;
-      }
-    }
-
-    p {
-      font-size: $font-sm;
-      line-height: 1.5;
-      margin-bottom: 3.6rem;
-
-      @include breakpoint-up("medium") {
-        font-size: $font-md;
-      }
     }
   }
 }
