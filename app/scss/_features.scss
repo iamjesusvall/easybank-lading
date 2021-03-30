@@ -1,11 +1,37 @@
 .features {
+  @include breakpoint-down("small") {
+    text-align: center;
+  }
   &__grid {
-    @include breakpoint-up("large") {
+    @include breakpoint-up("medium") {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
   &__item {
+    border: 1px solid pink;
+    // padding: 1.5rem;
+
+    &:nth-child(2n + 1) {
+      @include breakpoint-up("medium") {
+        margin-right: 3rem;
+      }
+      @include breakpoint-up("large") {
+        margin-right: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      @include breakpoint-up("large") {
+        margin-right: 3rem;
+      }
+    }
+
+    @include breakpoint-up("medium") {
+      flex: 0 0 calc(50% - 3rem);
+    }
+
     @include breakpoint-up("large") {
       flex: 1;
     }

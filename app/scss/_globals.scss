@@ -50,10 +50,11 @@ h2 {
 p {
   font-size: $font-sm;
   line-height: 1.5;
-  margin-bottom: 3.6rem;
+  margin-bottom: 2.2857em;
 
   @include breakpoint-up("large") {
     font-size: $font-md;
+    margin-bottom: 2em;
   }
 }
 a,

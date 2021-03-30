@@ -133,12 +133,13 @@ h2 {
 p {
   font-size: 1.4rem;
   line-height: 1.5;
-  margin-bottom: 3.6rem;
+  margin-bottom: 2.2857em;
 }
 
 @media (min-width: 64em) {
   p {
     font-size: 1.8rem;
+    margin-bottom: 2em;
   }
 }
 
@@ -470,11 +471,49 @@ button,
   }
 }
 
-@media (min-width: 64em) {
+@media (max-width: 47.74375em) {
+  .features {
+    text-align: center;
+  }
+}
+
+@media (min-width: 47.75em) {
   .features__grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.features__item {
+  border: 1px solid pink;
+}
+
+@media (min-width: 47.75em) {
+  .features__item:nth-child(2n + 1) {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .features__item:nth-child(2n + 1) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .features__item:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 47.75em) {
+  .features__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 3rem);
+            flex: 0 0 calc(50% - 3rem);
   }
 }
 
