@@ -79,6 +79,10 @@ html {
   overflow: auto;
 }
 
+html.noscroll {
+  overflow: hidden;
+}
+
 *,
 *::before,
 *::after {
