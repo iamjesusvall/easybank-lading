@@ -714,4 +714,57 @@ button,
     letter-spacing: 0.04rem;
   }
 }
+
+.footer {
+  background-color: #2d314d;
+  color: white;
+  padding: 4rem;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.footer__social {
+  margin-bottom: 3rem;
+}
+
+.footer__social a {
+  display: inline-block;
+}
+
+.footer__social a:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__links a {
+  line-height: 2.25;
+}
+
+.footer__links.col2 {
+  margin-bottom: 3rem;
+}
+
+.footer__cta a.btn {
+  margin-bottom: 3rem;
+}
 /*# sourceMappingURL=style.css.map */
