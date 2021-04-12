@@ -1,0 +1,93 @@
+.articles {
+  background-color: $veryLightGray;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.article {
+  &__content {
+    & > h2 {
+      margin-bottom: 5rem;
+
+      @include breakpoint-down("small") {
+        margin-bottom: 3.8rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 3rem;
+    // grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1fr));
+
+    grid-template-columns: 1fr;
+
+    @include breakpoint-up("medium") {
+      grid-template-columns: repeat(2, minmax(25.5rem, 1fr));
+    }
+
+    @include breakpoint-up("large") {
+      grid-template-columns: repeat(4, minmax(25.5rem, 1fr));
+    }
+  }
+
+  &__item {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    transition: $transition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // border-top-left-radius: 5px;
+    // border-top-right-radius: 5px;
+  }
+
+  &__text {
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3.5rem;
+    padding-left: 3rem;
+    color: $grayishBlue;
+
+    @include breakpoint-up("medium") {
+      padding-right: 2.4rem;
+      padding-bottom: 1rem;
+      padding-left: 2.4rem;
+    }
+  }
+
+  &__author {
+    font-size: $font-xs;
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    letter-spacing: -0.06rem;
+    font-weight: 400;
+    color: $darkBlue;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: 1.275rem;
+
+    @include breakpoint-down("small") {
+      font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 0.04rem;
+    }
+  }
+}
